@@ -1,0 +1,65 @@
+name: boi_chokro
+description: "A new Flutter project."
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.4
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  flutter_svg: ^2.0.15
+  flutter_map: ^7.0.2
+  latlong2: ^0.9.1
+  geolocator: ^13.0.2
+  rename_app: ^1.6.1
+  icons_launcher: ^3.0.0
+  form_field_validator: ^1.1.0
+  cached_network_image: ^3.4.1
+  flutter_rating_bar: ^4.0.1
+  flutter_widget_from_html_core: ^0.15.2
+  animations: ^2.0.11
+  url_launcher: ^6.3.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/Illustrations/
+    - assets/icons/
+
+  # fonts:
+  #   - family: Plus Jakarta
+  #     fonts:
+  #       - asset: assets/fonts/plus_jakarta/PlusJakartaDisplay-Regular.otf
+  #       - asset: assets/fonts/plus_jakarta/PlusJakartaDisplay-Medium.otf
+  #         weight: 500
+  #       - asset: assets/fonts/plus_jakarta/PlusJakartaDisplay-Bold.otf
+  #         weight: 700
+  #   - family: Grandis Extended
+  #     fonts:
+  #       - asset: assets/fonts/grandis_extended/GrandisExtended-Regular.ttf
+  #       - asset: assets/fonts/grandis_extended/GrandisExtended-Thin.ttf
+  #         weight: 300
+  #       - asset: assets/fonts/grandis_extended/GrandisExtended-Medium.ttf
+  #         weight: 500
+  #       - asset: assets/fonts/grandis_extended/GrandisExtended-Bold.ttf
+  #         weight: 700
+  #       - asset: assets/fonts/grandis_extended/GrandisExtended-Black.ttf
+  #         weight: 900
+
+icons_launcher:
+  image_path: "assets/boi_chokro_logo.png"
+  platforms:
+    android:
+      enable: true
+    ios:
+      enable: true
