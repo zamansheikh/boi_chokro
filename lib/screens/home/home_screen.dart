@@ -2,11 +2,13 @@ import 'package:boi_chokro/components/cards/big/big_card_image_slide.dart';
 import 'package:boi_chokro/components/cards/big/book_info_big_card.dart';
 import 'package:boi_chokro/constants.dart';
 import 'package:boi_chokro/demo_data.dart';
+import 'package:boi_chokro/pages/auth/sign_in_screen.dart';
 import 'package:boi_chokro/pages/home/favourite_screen.dart';
 import 'package:boi_chokro/screens/details/details_screen.dart';
 import 'package:boi_chokro/screens/featured/featurred_screen.dart';
 import 'package:boi_chokro/screens/home/components/medium_card_list.dart';
 import 'package:boi_chokro/screens/home/components/promotion_banner.dart';
+import 'package:boi_chokro/services/firebase_auth_repo.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -39,6 +41,23 @@ class HomeScreen extends StatelessWidget {
             ),
           ],
         ),
+        actions: [
+          IconButton(
+            onPressed: () async {
+              await FirebaseAuthRepo.authRemoteDataSource.signOut().then(
+                (value) {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SignInScreen(),
+                    ),
+                  );
+                },
+              );
+            },
+            icon: const Icon(Icons.logout),
+          ),
+        ],
       ),
       body: SafeArea(
         child: SingleChildScrollView(

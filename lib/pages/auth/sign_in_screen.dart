@@ -1,3 +1,4 @@
+import 'package:boi_chokro/pages/auth/sign_up_screen.dart';
 import 'package:flutter/material.dart';
 
 class SignInScreen extends StatelessWidget {
@@ -38,9 +39,9 @@ class SignInScreen extends StatelessWidget {
                             hintText: 'Phone',
                             filled: true,
                             fillColor: Color(0xFFF5FCF9),
-                            contentPadding: const EdgeInsets.symmetric(
+                            contentPadding: EdgeInsets.symmetric(
                                 horizontal: 16.0 * 1.5, vertical: 16.0),
-                            border: const OutlineInputBorder(
+                            border: OutlineInputBorder(
                               borderSide: BorderSide.none,
                               borderRadius:
                                   BorderRadius.all(Radius.circular(50)),
@@ -59,7 +60,7 @@ class SignInScreen extends StatelessWidget {
                               hintText: 'Password',
                               filled: true,
                               fillColor: Color(0xFFF5FCF9),
-                              contentPadding: const EdgeInsets.symmetric(
+                              contentPadding: EdgeInsets.symmetric(
                                   horizontal: 16.0 * 1.5, vertical: 16.0),
                               border: OutlineInputBorder(
                                 borderSide: BorderSide.none,
@@ -106,7 +107,14 @@ class SignInScreen extends StatelessWidget {
                           ),
                         ),
                         TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => SignUpScreen(),
+                              ),
+                            );
+                          },
                           child: Text.rich(
                             const TextSpan(
                               text: "Don’t have an account? ",
